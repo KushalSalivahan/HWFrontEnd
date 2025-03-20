@@ -1,67 +1,82 @@
-/* Fullscreen Centered Container */
-.container {
+/* Ensure the entire viewport is used */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 150%;
   display: flex;
-  justify-content: center;  /* Center horizontally */
-  align-items: center;  /* Center vertically */
-  height: 100vh; /* Full viewport height */
-  width: 100vw; /* Full viewport width */
-  background-color: #f4f4f4; /* Light background */
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
 }
 
-/* Card Styling */
+/* Main container (centers all content) */
+.container {
+  display: flex;
+  flex-direction: column;  /* Stack forms vertically */
+  justify-content: center; /* Center vertically */
+  align-items: center;     /* Center horizontally */
+  width: 100%;
+  min-height: 100vh;       /* Full height */
+  gap: 20px;               /* Space between elements */
+  text-align: center;      /* Center text inside */
+}
+
+/* Style for form cards */
 .card {
   background: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 400px; /* Adjust as needed */
+  max-width: 400px;
   text-align: center;
 }
 
-/* Logo Styling */
-.logo {
-  width: 120px; /* Adjust logo size */
-  height: auto; /* Maintain aspect ratio */
-  display: block;
-  margin: 0 auto 20px; /* Center logo with spacing */
+/* Title alignment */
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
-/* Form Input */
+/* Center inputs */
 .input {
   width: 100%;
   padding: 10px;
-  margin: 10px 0;
+  margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 16px;
+  text-align: center;
 }
 
-/* Submit Button */
+/* Full-width button */
 .button {
   width: 100%;
   padding: 10px;
-  background-color: #007bff;
+  background: #007bff;
   color: white;
   border: none;
   border-radius: 5px;
-  font-size: 16px;
   cursor: pointer;
-  transition: background 0.3s ease;
 }
 
 .button:hover {
-  background-color: #0056b3;
+  background: #0056b3;
 }
 
-/* Response Message */
+/* Center response messages */
 .message {
-  background: #e9ecef;
+  background: #eef;
   padding: 10px;
-  margin-top: 15px;
   border-radius: 5px;
-  font-size: 14px;
-  color: #333;
   white-space: pre-wrap;
-  word-wrap: break-word;
+  text-align: center;
+}
+
+/* Logo centered at the top */
+.logo {
+  display: block;
+  margin: 20px auto;
+  max-width: 200px;
 }
