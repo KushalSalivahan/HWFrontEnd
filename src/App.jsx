@@ -14,7 +14,7 @@ const App = () => {
     event.preventDefault();
     try {
       const response = await axios.post("http://localhost:8080/api/encrypt", {
-        data: inputValue,
+         data: inputValue,
       });
       setResponseMessage(response.data);
     } catch (error) {
@@ -28,15 +28,17 @@ const App = () => {
     event.preventDefault();
     try {
       const response = await axios.post("http://localhost:8080/api/decrypt", {
-        data: decryptValue,
+         data:decryptValue,      
+        
       });
     
       setDecryptedMessage(response.data);
-      
+
     } catch (error) {
       console.error("Error decrypting data", error);
       setDecryptedMessage("Failed to decrypt data");
     }
+    
   };
 
   return (
@@ -78,7 +80,7 @@ const App = () => {
               type="text"
               value={decryptValue}
               onChange={(e) => setDecryptValue(e.target.value)}
-              className={styles.input.trim()}
+              className={styles.input}
               placeholder="Enter encrypted text"
               required
             />
