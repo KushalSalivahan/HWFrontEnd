@@ -9,7 +9,7 @@ const App = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post("/api/encrypt", {
+      const response = await axios.post("http://localhost:8080/api/encrypt", {
         data: inputValue,
       });
       setResponseMessage(response.data);
@@ -20,9 +20,10 @@ const App = () => {
   };
 
   return (
-    <div className={styles.container}>
+    <>
+    <img src={"https://alnahiya.com/wp-content/uploads/2020/10/Honeywell-logo-large-scaled.jpg"} alt="Logo" className={styles.logo} />
       
-      <img src={"https://alnahiya.com/wp-content/uploads/2020/10/Honeywell-logo-large-scaled.jpg"} alt="Logo" className={styles.logo} />
+    <div className={styles.container}>
       <div className={styles.card}>
         <h2 className={styles.title}>Send a String</h2>
         <form onSubmit={handleSubmit}>
@@ -45,7 +46,8 @@ const App = () => {
           <pre className={styles.message}>{JSON.stringify(responseMessage, null, 2)}</pre>
         )}
       </div>
-    </div>
+      </div>
+      </>
   );
 };
 

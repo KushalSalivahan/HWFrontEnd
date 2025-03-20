@@ -1,51 +1,67 @@
-/* App.module.css */
+/* Fullscreen Centered Container */
 .container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background-color: #f3f4f6;
+  justify-content: center;  /* Center horizontally */
+  align-items: center;  /* Center vertically */
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  background-color: #f4f4f4; /* Light background */
 }
 
+/* Card Styling */
 .card {
-  background-color: white;
-  padding: 1.5rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 24rem;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px; /* Adjust as needed */
+  text-align: center;
 }
 
-.title {
-  font-size: 1.25rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
+/* Logo Styling */
+.logo {
+  width: 120px; /* Adjust logo size */
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+  margin: 0 auto 20px; /* Center logo with spacing */
 }
 
+/* Form Input */
 .input {
   width: 100%;
-  padding: 0.5rem;
-  border: 1px solid #d1d5db;
-  border-radius: 0.375rem;
-  margin-bottom: 1rem;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
+/* Submit Button */
 .button {
   width: 100%;
-  background-color: #3b82f6;
+  padding: 10px;
+  background-color: #007bff;
   color: white;
-  padding: 0.5rem;
-  border-radius: 0.375rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background 0.3s ease;
 }
 
 .button:hover {
-  background-color: #2563eb;
+  background-color: #0056b3;
 }
 
+/* Response Message */
 .message {
-  margin-top: 1rem;
-  text-align: center;
-  color: #4b5563;
+  background: #e9ecef;
+  padding: 10px;
+  margin-top: 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #333;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }

@@ -13,6 +13,8 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -54,6 +56,7 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -65,8 +68,5 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-
-  logo{
-    display: flex;
-  }
+ 
 }
